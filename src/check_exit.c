@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtolower.c                                    :+:      :+:    :+:   */
+/*   check_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/02/11 14:57:20 by irhett            #+#    #+#             */
-/*   Updated: 2017/05/28 11:26:58 by irhett           ###   ########.fr       */
+/*   Created: 2017/05/28 10:23:52 by irhett            #+#    #+#             */
+/*   Updated: 2017/05/28 11:27:47 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "gg.h"
 
-void	ft_strtolower(char *str)
+void	check_exit(char *str)
 {
-	if (str)
-		while (*str != '\0')
-		{
-			*str = ft_tolower(*str);
-			str++;
-		}	
+	ft_strtolower(str);
+	if (ft_strcmp("exit", str) == 0)
+		exit(0);
 }
