@@ -6,7 +6,7 @@
 /*   By: irhett <irhett@student.42.us.org>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/28 10:06:56 by irhett            #+#    #+#             */
-/*   Updated: 2017/05/28 11:58:08 by irhett           ###   ########.fr       */
+/*   Updated: 2017/05/29 11:55:43 by irhett           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,9 @@ void		generate(unsigned char c[8], unsigned int steps, int is_alpha)
 	unsigned char	r;
 	unsigned char	g;
 	unsigned char	b;
-
+	
+	if (steps == 0)
+		return ;
 	steps -= 1;
 	i = 0;
 	while (i <= steps)
