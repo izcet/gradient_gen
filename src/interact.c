@@ -23,11 +23,9 @@ static unsigned int		ask(char *str)
 	{
 		printf("What is the %s?\n", str);
 		ret = get_next_line(0, &buff);
-		//printf("Here\n");
 		if (ret <= 0)
 			exit(ft_error("Bad response"));
 		check_exit(buff);
-		//printf ("here\n");
 		temp = ft_atoi(buff);
 		free(buff);
 		if (temp < 0)
